@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishu Vaishnav's Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Hi, I am Vishu Vaishnav</h1>
+        <h3>Welcome To My Portfolio Website !!</h3>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="about" class="content">
+        <h2>About Me</h2>
+        <p>I am a Python enthusiast, constantly exploring new ways to use this versatile language to solve complex problems as well as designing and implementing effective database solution using SQL. With a passion for coding in Python and SQL, I strive to stay up-to-date with the latest developments in this field.</p>
+    </section>
+    <section id="projects" class="content">
+        <h2>My Projects</h2>
+        <div class="project">
+            <h3>DATA ANALYSIS ON INDIA'S WORLD CUP WINNING STREAK</h3>
+            <p>This project is an analysis that focuses on India's performance in cricket matches played after 2007.</p>
+            <button class="modal-button" data-modal="modal1">Details</button>
+        </div>
+        <div class="project">
+            <h3>Gps Tracker Using Python</h3>
+            <p>This project is mainly focusing on locating you in real-time on a map through your entered location.</p>
+            <button class="modal-button" data-modal="modal2">Details</button>
+        </div>
+    </section>
+    <section id="contact" class="content">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out to me if you have any questions, project ideas, or just want to say hello. You can email me at neverendingstuios@gmail.com or connect with me on LinkedIn and Twitter.</p>
+    </section>
+
+    <!-- Modals for Project Details -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-modal="modal1">&times;</span>
+            <h2>DATA ANALYSIS ON INDIA'S WORLD CUP WINNING STREAK</h2>
+            <p>The analysis primarily focuses on India's performance in cricket matches played after 2007. It provides insights into India's win percentage over time and compares it to other major cricket-playing nations. The code also visualizes these insights for a better understanding of India's performance in cricket.</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-button" data-modal="modal2">&times;</span>
+            <h2>Gps Tracker Using Python</h2>
+            <p>
+                This Python script utilizes the Geopy and Folium libraries to retrieve and visualize the GPS coordinates of specified locations. The gps_locator function takes a location as input, queries its coordinates using Nominatim geocoding, and creates a Folium map with a marker at that location. The script demonstrates how to handle location not found cases and saves the interactive map as an HTML file named with the current
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const modalButtons = document.querySelectorAll('.modal-button');
+
+            modalButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    const modalId = button.getAttribute('data-modal');
+                    const modal = document.getElementById(modalId);
+
+                    if (modal) {
+                        modal.style.display = 'block';
+
+                        // Close modal when clicking the close button
+                        const closeButtons = modal.getElementsByClassName('close-button');
+                        if (closeButtons[0]) {
+                            closeButtons[0].addEventListener('click', function () {
+                                modal.style.display = 'none';
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
