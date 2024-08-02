@@ -4,99 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vishu Vaishnav's Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        header img {
-            width: 150px;
-            border-radius: 50%;
-            margin-top: 20px;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #444;
-            padding: 10px 0;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            border-radius: 5px;
-            transition: background 0.3s, box-shadow 0.3s;
-        }
-        nav a:hover {
-            background: #555;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        section {
-            padding: 20px;
-            background: #fff;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s;
-        }
-        section:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
-        .main {
-            padding: 20px;
-        }
-        .project-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid #ddd;
-        }
-        .project-item:last-child {
-            border-bottom: none;
-        }
-        .project-item a {
-            color: #333;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s, text-shadow 0.3s;
-        }
-        .project-item a:hover {
-            color: #007BFF;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-        @media (max-width: 600px) {
-            nav {
-                flex-direction: column;
-            }
-            .project-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -105,20 +13,50 @@
     </header>
     <nav>
         <a href="#about">About</a>
+        <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
     </nav>
     <div class="container">
         <section id="about" class="main">
             <h2>About Me</h2>
-            <p>Hello! I'm Vishu Vaishnav, a passionate coder and competitive programmer. I enjoy working with data and databases and have experience with various programming languages and tools. I am also a Python enthusiast , constantly exploring new ways to use this versatile language to solve complex problems as well as designing and implementing effective database solution using SQL .With a passion of coding in Python and SQL ,I strive to stay up-to-date with the latest developments in this field.</p>
+            <p>Hello! I'm Vishu Vaishnav, a passionate coder and competitive programmer. I enjoy working with data and databases and have experience with various programming languages and tools.</p>
+        </section>
+        <section id="skills" class="main">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/python-2-226051.png" alt="Python">
+                    <p>Python</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/java-60-1174953.png" alt="Java">
+                    <p>Java</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/mysql-4-226026.png" alt="MySQL">
+                    <p>MySQL</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/javascript-1-225993.png" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/html5-40-1175193.png" alt="HTML">
+                    <p>HTML</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/css3-11-1175239.png" alt="CSS">
+                    <p>CSS</p>
+                </div>
+                <div class="skill">
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/c-programming-569564.png" alt="C">
+                    <p>C</p>
+                </div>
+            </div>
         </section>
         <section id="projects" class="main">
             <h2>Projects</h2>
-            <div class="project-item">
-                <a href="https://github.com/vishuvaishnav/Data-Structures-And-Algorithms">Data Structures And Algorithms</a>
-                <span>Python</span>
-            </div>
             <div class="project-item">
                 <a href="https://github.com/vishuvaishnav/DATA-ANALYSIS-ON-INDIAS-WORLD-CUP-WINNING-STREAK">Data Analysis on India's World Cup Winning Streak</a>
                 <span>Jupyter Notebook</span>
@@ -139,10 +77,14 @@
                 <a href="https://github.com/vishuvaishnav/gold_prediction">Gold Prediction</a>
                 <span>Jupyter Notebook</span>
             </div>
+            <div class="project-item">
+                <a href="https://github.com/vishuvaishnav/Data-Structures-And-Algorithms">Repository : Data Structures And Algorithms</a>
+                <span>Python</span>
+            </div>
         </section>
         <section id="contact" class="main">
             <h2>Contact</h2>
-            <p>You can reach me at <a href="mailto:vishuvaishnav3001@gmail.com">vishuvaishnav@example.com</a></p>
+            <p>You can reach me at <a href="mailto:vishuvaishnav3001@gmail.com">vishuvaishnav3001@gmail.com</a></p>
         </section>
     </div>
     <footer>
